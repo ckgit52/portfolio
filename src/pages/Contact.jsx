@@ -1,84 +1,55 @@
-import React, { useState } from 'react'
-import {FaLinkedin,FaInstagram,FaFacebook} from 'react-icons/fa'
-
+// src/components/Contact.js
+import React from 'react';
 
 const Contact = () => {
-  const [name, setName] = useState("")
-
-  const [email, setEmail] = useState("")
-  const [phone, setPhone] = useState("")
-
   return (
-    <>
-      <div className=' rounded-3xl max-h-screen '>
-        <form className='m-4 text-center flex flex-col gap-4 bg-gradient-to-r from-slate-500 to-black rounded-full'>
-          <label className=''>
-
-            <input className='p-2  bg-black text-white rounded-xl m-2' type="text"
-              value={name}
-              placeholder="ENTER NAME:"
-              onChange={(e) => setName(e.target.value
-              )}
-
-
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="bg-white p-8 rounded shadow-md w-96">
+        <h1 className="text-2xl font-bold mb-4">Contact Me...</h1>
+        <form>
+          <div className="mb-4">
+            <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              className="border border-gray-300 p-2 w-full rounded"
             />
-
-          </label>
-
-          <label className=''>
-
-            <input className='p-2  bg-black text-white  rounded-xl ' type="text"
-              value={email}
-              placeholder="ENTER EMAIL:"
-              onChange={(e) => setEmail(e.target.value
-              )}
-
-
+          </div>
+          <div className="mb-4">
+            <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              className="border border-gray-300 p-2 w-full rounded"
             />
-
-          </label>
-
-          <label className=''>
-
-            <input className='p-2  bg-black text-white  rounded-xl m-2' type="number"
-              value={phone}
-              placeholder="ENTER PHONE.NO:"
-              onChange={(e) => setPhone(e.target.value
-              )}
-
-
-            />
-
-
-          </label>
-          <input className='text-white bg-gradient-to-t from-slate-500 to-black  w-full rounded-full hover:cursor-pointer p-1 text-xl font-bold' type="submit" value="Submit" />
-
+          </div>
+          <div className="mb-4">
+            <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              className="border border-gray-300 p-2 w-full rounded"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+          >
+            Submit
+          </button>
         </form>
-        
       </div>
+    </div>
+  );
+};
 
-      <div className='flex items-center justify-center gap-4 my-10 text-white font-bold'>
-        {/* <ul className='flex gap-4 mt-10'>
-          <li>instagram </li>
-          <li>linkdin </li>
-          <li>facebook </li>
-        </ul> */}
-       
-          <h1 className='font-bold text-2xl m-4'>connect with me--> </h1>
-       
-       
-       
-
-        <a className='bg-gradient-to-b from-red-500 to-orange-800 p-2 rounded-3xl ' href="https://www.instagram.com" target="_blank" rel="noreferrer"><FaInstagram className='animate-bounce w-6 h-6 hover:animate-bounce hover:w-10 hover:h-10 hover:animate-ping'/></a>
-        <a className='bg-gradient-to-t from-blue-500 to-sky-600 p-2 rounded-3xl ' href="https://www.facebook.com" target="_blank" rel="noreferrer"><FaFacebook className='animate-bounce w-6 h-6 hover:animate-bounce hover:w-10 hover:h-10 hover:animate-ping'/></a>
-        <a className='bg-blue-800 p-2 rounded-3xl ' href="https://www.linkedin.com" target="_blank" rel="noreferrer"><FaLinkedin className='animate-bounce w-6 h-6 hover:animate-bounce hover:w-10 hover:h-10 hover:animate-ping'/></a>
-       
-       
-       
-      
-      </div>
-    </>
-  )
-}
-
-export default Contact
+export default Contact;

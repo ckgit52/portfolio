@@ -1,42 +1,35 @@
-import React from 'react'
+// src/components/About.js
+import React from 'react';
 
-
-const Home = () => {
+const About = () => {
   return (
-    <>
-      <div className='max-h-screen'>
-
-
-        <div className='bg-gradient-to-b from-slate-500 to-black'>
-          <h1 className='font-bold rounded-full text-2xl  m-4 text-center  text-white px-4 z-10'><span className='text-white font-extrabold uppercase font-serif'>all about me !!!</span></h1>
+    <div className="min-h-screen flex items-center justify-center bg-gray-500">
+      <div className="bg-white p-8 rounded shadow-md max-w-md w-full md:max-w-lg">
+        <div className="mb-4 text-center">
+          <img
+            src="ck.jpg" 
+            alt="Chandan Kumar"
+            className="rounded-full w-40 h-40 mx-auto mb-4"
+          />
         </div>
 
-
-        <div className='flex flex-col gap-4   rounded-2xl bg-gradient-to-r from-slate-500 to-black sm:flex sm:flex-row'>
-          <img className='mx-4 object-cover rounded-full h-52 w-52' src='ck.jpg' alt='chandan' />
-
-
-          <div className='bg-gradient-to-t from-slate-500 to-black rounded-xl bg-black text-white sm:rounded-2xl sm:bg-gray-100 p-1'>
-           MY NAME IS <span className='font-extrabold font-serif text-red-700'>CHANDAN KUMAR</span>
-           <br/>
-           I AM <span className='font-extrabold font-serif text-red-700'>FRONTEND</span> DEVELOPER
-           <br/>
-           I AM ALSO WORKING ON MY <span className='font-extrabold font-serif text-red-700'>BACKEND</span> DEVLOPMENT SKILLS
-          </div>
-
-        </div>
+        <h1 className="text-3xl font-bold mb-4 text-gray-800">About Me...</h1>
+        <p className="text-gray-700 mb-4">
+          Hi, I'm <span className='font-bold text-black'>Chandan Kumar</span>, a passionate frontend developer with expertise in React.js. I have
+          a keen eye for detail and a commitment to delivering high-quality user experiences.
+        </p>
+        <p className="text-gray-700 mb-4">
+          I specialize in building modern, responsive, and performance-optimized web applications.
+          Whether it's creating beautiful user interfaces or solving complex technical challenges, I
+          am dedicated to pushing the boundaries of what's possible in web development.
+        </p>
+        <p className="text-gray-700">
+          Connect with me to explore the world of frontend development, React.js, and cutting-edge
+          web technologies.
+        </p>
       </div>
+    </div>
+  );
+};
 
-
-
-
-
-
-
-
-
-    </>
-  )
-}
-
-export default Home
+export default About;
